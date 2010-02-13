@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core
+END
+habtm.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core/habtm.php
+END
+csrf.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core/csrf.php
+END
+orm.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core/orm.php
+END
+shortcuts.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core/shortcuts.php
+END
+mval.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core/mval.php
+END
+comments.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core/comments.php
+END
+group_alias.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core/group_alias.php
+END
+ajaxval.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core/ajaxval.php
+END
+auto_i18n.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core/auto_i18n.php
+END
+success.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/imglistados~imglistados-svn/!svn/ver/1/modules/formo/libraries/formo_plugins_core/success.php
+END

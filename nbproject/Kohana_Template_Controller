@@ -1,0 +1,17 @@
+<?php
+/**
+ * Description of ${name?cap_first} Controller
+ *
+ * @author ${user}
+ */
+defined('SYSPATH') or die('No direct script access.');
+
+class ${name?cap_first}_Controller extends Template_Controller
+ {
+    public $template = '';
+
+    public function index()
+     {
+       // Insert code here...
+     }
+ }

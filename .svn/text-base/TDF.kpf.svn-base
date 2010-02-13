@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="4090bc39-f9d6-a041-bda2-2214fe6eae7b" kpf_version="4" name="TDF.kpf">
+<file id="941dabaa-de9a-fd44-a447-c3207598a2bf" idref="4090bc39-f9d6-a041-bda2-2214fe6eae7b/system/libraries" name="Administration.kpf" url="file:///Users/bicho44/Sites/TratoSVN/testeo/Administration.kpf">
+</file>
+<preference-set idref="4090bc39-f9d6-a041-bda2-2214fe6eae7b">
+  <boolean id="import_live">1</boolean>
+</preference-set>
+</project>

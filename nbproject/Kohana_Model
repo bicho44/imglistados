@@ -1,0 +1,12 @@
+<?php
+/**
+ * Description of ${name?cap_first} Controller
+ *
+ * @author ${user}
+ */
+defined('SYSPATH') or die('No direct script access.');
+
+class ${name?cap_first}_Model extends Model
+ {
+    // Insert code here...
+ }

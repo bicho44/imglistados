@@ -1,0 +1,20 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+2009-01-14 00:54:14 -03:00 --- error: Missing i18n entry form_error.subject.alpha for language en_US
+2009-01-14 01:23:39 -03:00 --- error: Missing i18n entry form_error.subject.alpha for language en_US
+2009-01-14 01:24:03 -03:00 --- error: Missing i18n entry form_error.subject.alpha for language en_US
+2009-01-14 02:00:20 -03:00 --- error: Uncaught PHP Error: Swift_ClassLoader::require_once(/Users/bicho44/Sites/TratoSVN/testeo/system/vendor/swift/Swift/../Swift/Authenticator/yes.php) [<a href='function.Swift-ClassLoader-require-once'>function.Swift-ClassLoader-require-once</a>]: failed to open stream: No such file or directory in file system/vendor/swift/Swift/ClassLoader.php on line 35
+2009-01-14 02:26:30 -03:00 --- error: Missing i18n entry form_error.subject.alpha for language en_US
+2009-01-14 02:31:07 -03:00 --- error: Missing i18n entry form_error.subject.alpha for language en_US
+2009-01-14 02:37:05 -03:00 --- error: Missing i18n entry form_error.subject.alpha for language en_US
+2009-01-14 02:48:40 -03:00 --- error: Missing i18n entry form_error.subject.alpha for language en_US
+2009-01-14 02:53:00 -03:00 --- error: Missing i18n entry form_error.subject.alpha for language en_US
+2009-01-14 02:55:17 -03:00 --- error: Missing i18n entry form_error.subject.alpha for language en_US
+2009-01-14 02:57:51 -03:00 --- error: Uncaught PHP Error: Swift_ClassLoader::require_once(/Users/bicho44/Sites/TratoSVN/testeo/system/vendor/swift/Swift/../Swift/Authenticator/yes.php) [<a href='function.Swift-ClassLoader-require-once'>function.Swift-ClassLoader-require-once</a>]: failed to open stream: No such file or directory in file system/vendor/swift/Swift/ClassLoader.php on line 35
+2009-01-14 15:08:14 -03:00 --- error: Uncaught PHP Error: Swift_ClassLoader::require_once(/Users/bicho44/Sites/TratoSVN/testeo/system/vendor/swift/Swift/../Swift/Authenticator/no.php) [<a href='function.Swift-ClassLoader-require-once'>function.Swift-ClassLoader-require-once</a>]: failed to open stream: No such file or directory in file system/vendor/swift/Swift/ClassLoader.php on line 35
+2009-01-14 15:08:59 -03:00 --- error: Uncaught Swift_ConnectionException: The SMTP connection failed to start [mail.tratodirecto.com.ar:25]: fsockopen returned Error Number 19928679 and Error String '' in file system/vendor/swift/Swift/Connection/SMTP.php on line 309
+2009-01-14 15:19:59 -03:00 --- error: Uncaught PHP Error: Swift_ClassLoader::require_once(/Users/bicho44/Sites/TratoSVN/testeo/system/vendor/swift/Swift/../Swift/Authenticator/yes.php) [<a href='function.Swift-ClassLoader-require-once'>function.Swift-ClassLoader-require-once</a>]: failed to open stream: No such file or directory in file system/vendor/swift/Swift/ClassLoader.php on line 35
+2009-01-14 15:40:59 -03:00 --- error: Uncaught Swift_ConnectionException: The SMTP connection failed to start [mail.tratodirecto.com.ar:25]: fsockopen returned Error Number 19928679 and Error String '' in file system/vendor/swift/Swift/Connection/SMTP.php on line 309
+2009-01-14 15:42:07 -03:00 --- error: Uncaught PHP Error: Swift_ClassLoader::require_once(/Users/bicho44/Sites/TratoSVN/testeo/system/vendor/swift/Swift/../Swift/Authenticator/password.php) [<a href='function.Swift-ClassLoader-require-once'>function.Swift-ClassLoader-require-once</a>]: failed to open stream: No such file or directory in file system/vendor/swift/Swift/ClassLoader.php on line 35
+2009-01-14 15:43:24 -03:00 --- error: Uncaught Swift_ConnectionException: The SMTP connection failed to start [mail.tratodirecto.com.ar:25]: fsockopen returned Error Number 19928679 and Error String '' in file system/vendor/swift/Swift/Connection/SMTP.php on line 309
+2009-01-14 15:44:43 -03:00 --- error: Uncaught Swift_ConnectionException: The SMTP connection failed to start [mail.tratodirecto.com.ar:25]: fsockopen returned Error Number 19928679 and Error String '' in file system/vendor/swift/Swift/Connection/SMTP.php on line 309
