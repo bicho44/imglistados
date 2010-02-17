@@ -5,7 +5,7 @@ Anda en mi local y en un repository
 
 Se hicieron varias modificaciones de formato y color.
 Se utilizo la grilla 960.
-Tambi�n se optimizaron algunas cosas dependientes del Disenio.
+También se optimizaron algunas cosas dependientes del Disenio.
 
 Federico
 
