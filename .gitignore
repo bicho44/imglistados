@@ -1,4 +1,4 @@
-.svn # Ignore all dotfiles...
+.svn/
 nbproject/
 Steal/
 system/
