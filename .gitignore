@@ -1,2 +1,6 @@
 .svn # Ignore all dotfiles...
-
+nbproject/
+Steal/
+system/
+application/cache
+application/logs

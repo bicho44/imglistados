@@ -1,6 +1,6 @@
  <?php //Menu Rubros
  if (isset($menu)) echo $menu; ?>
-<div class="yui-b data">
+
     <!-- YOUR DATA GOES HERE -->
      <?php $base = url::base(); ?>
 
@@ -60,4 +60,4 @@
     <h3 class="notice">No hay datos por favor cargue alguno</h3>
 
      <?php } // fin si no hay datos?>
-</div>
+

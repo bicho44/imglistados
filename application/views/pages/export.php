@@ -1,4 +1,4 @@
-<div class="yui-b data">
+
     <!-- YOUR DATA GOES HERE -->
     <?=form::open(NULL, array("class"=>"cmxform"))?>
     <div class="yui-g">
@@ -48,4 +48,4 @@
     </div>
     <?=form::submit('submit',"Exportar",'class="awesome big green"')?>
     <?=form::close()?>
-</div>
+

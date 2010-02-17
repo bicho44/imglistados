@@ -51,11 +51,11 @@ class Website_Controller extends Template_Controller {
 
                 //Listado de Categorías
                 $this->categorias = ORM::factory('categoria')->select_list();
-		$this->template->cats =  $this->categorias;
+		//$this->template->cats =  $this->categorias;
 
                 //Listado de Localidades
                 $this->localidades = ORM::factory('localidad')->select_list();
-                $this->template->localidades = $this->localidades;
+                //$this->template->localidades = $this->localidades;
                 
 		//$this->profiler = new Profiler;
 

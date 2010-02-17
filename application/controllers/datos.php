@@ -69,6 +69,8 @@ class Datos_Controller extends Website_Controller {
 
         $this->localidad = ORM::factory('localidad',$_SESSION['localidad']);
         $this->categoria = ORM::factory('categoria',$_SESSION['cat']);
+        $this->template->controller = 'datos';
+
     }
 
     /**
@@ -102,8 +104,12 @@ class Datos_Controller extends Website_Controller {
         //if (isset($_GET['order'])) $this->order = $_GET['order'];
 
         $this->template->title = 'Administracion :: Datos';
+        
         $this->template->data = new View('pages/datos');
+        
         $this->template->data->menu = new View('datos/menudatos');
+        $this->template->data->cats =  $this->categorias;
+        $this->template->data->localidades = $this->localidades;
         //$this->template->data->gets =
         if(!empty($this->messages)) $this->template->messages = $this->messages;
 

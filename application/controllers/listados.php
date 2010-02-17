@@ -46,7 +46,8 @@ class Listados_Controller extends Website_Controller {
 
         $this->localidad = ORM::factory('localidad',$_SESSION['localidad'])->select_list();
         $this->categoria = ORM::factory('categoria',$_SESSION['cat'])->select_list();
-
+        
+        $this->template->controller = 'listados';
     }
     /**
      * Indice

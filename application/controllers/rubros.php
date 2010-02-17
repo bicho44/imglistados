@@ -26,6 +26,8 @@ class Rubros_Controller extends Website_Controller {
 
         if (Simple_Auth::instance()->logged_in(NULL))
             $this->user = Simple_Auth::instance()->get_user();
+
+        $this->template->controller = 'rubros';
     }
 
 
@@ -48,7 +50,7 @@ class Rubros_Controller extends Website_Controller {
      */
     public function page($pagenum) {
         $this->template->title = 'Administración :: Rubros y subRubros';
-
+        
         $this->template->data = new View('pages/rubros');
         $_SESSION['request'] = $this->uri->string();
         $this->template->data->menu = new View('rubros/menurubros');

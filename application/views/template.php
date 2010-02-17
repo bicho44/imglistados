@@ -1,25 +1,89 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE HTML>
+<html lang="es-AR">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <!--<link rel="stylesheet" href="http://yui.yahooapis.com/2.5.1/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css" />-->
         <title><?php echo " :: ".html::specialchars($title)." :: " ?></title>
-        <?php echo html::stylesheet(array
-        (
-        'media/css/reset-fonts','media/css/estructura',
-        ),
-        array
-        (
-        'screen','screen',
-        ));
+        <meta charset="UTF-8">
+        <?php echo html::stylesheet(
+        array('media/css/960-reset','media/css/text','media/css/estructura2' ),
+        array ( 'screen','screen','screen'));
+
         echo html::script('http://cdn.jquerytools.org/1.1.2/jquery.tools.min.js');
         echo html::script('media/script/tablesorter/jquery.tablesorter.min.js');
-        //echo html::script('media/script/tiny_mce/tiny_mce.js');
-        //echo html::script('media/scripts/jtip2.js');
         ?>
     </head>
     <body>
+
+        <div id="container" class="container_16 data">
+            <div id="hd" class="grid_16">
+                <h1><?php echo html::image(array('src'=>'media/images/imglistados-blanco.png',
+                    'alt'=>'IMGListados','width'=>'200','height'=>'85', 'align'=>'left')); ?>
+                    <?php echo $title; ?></h1>
+
+                <?php if (isset($user)) echo $user; ?>
+            </div>
+            <div  class="grid_16">
+                <ul id="menu">
+                    <?php foreach ($links as $link => $url): ?>
+
+                    <?php
+                    $class = '';
+                    if (isset($controller)) {
+                        
+                        if (strtolower($url)==strtolower($controller)){
+                            $class = array('class'=>'active');
+                        } else {
+                            $class = '';
+                        }
+                    }
+                    ?>
+                    <li><?php echo html::anchor($url, $link, $class);  ?></li>
+                    <?php endforeach ?>
+                </ul>
+            </div>
+
+
+
+            
+            <? if (isset($errors)) { ?><!-- Si hay errores los muestra -->
+
+            <div class="error">
+                    <?=html::image(array('src'=>'media/images/cross.png','alt'=>'Error','align'=>'right','width'=>'16','height'=>'16'))?>
+                <ul>
+                        <?php foreach ($errors as $error): ?>
+                    <li><?php echo $error ?></li>
+                        <?php endforeach ?>
+                </ul>
+            </div>
+
+                <?php } ?>
+            
+            <? if (isset($messages)) { ?><!-- Si hay Mensajes los muestra -->
+
+            <div class="success">
+                <ul>
+                        <?php foreach ($messages as $message): ?>
+                    <li><?php echo $message ?></li>
+                        <?php endforeach ?>
+                </ul>
+            </div>
+
+                <?php } ?>
+
+
+            <div class="grid_16">
+                <!-- Data -->
+                <?php echo $data;?>
+                <!-- End Data -->
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div id="ft">
+                <?php echo $footer; ?>
+            </div>
+        </div>
+
+
         <script type="text/javascript">
             //<![CDATA[
             <!--
@@ -32,110 +96,46 @@
                 {
                     $(this).val("");
                 });
-                $("#datos img[title]").tooltip({
-                    
-                // each trashcan image works as a trigger 
-        tip: '#tooltip', 
- 
-        // custom positioning 
-        position: 'center right', 
- 
-        // move tooltip a little bit to the right 
-        offset: [0, 8],
- 
-        // do not initialize tooltips until they are used 
-        lazy: true, 
- 
-        // there is no delay when the mouse is moved away from the trigger 
-        delay: 0 
-            });
+                $("table img[title]").tooltip({
+
+                    // each trashcan image works as a trigger
+                    tip: '#tooltip',
+
+                    // custom positioning
+                    position: 'center left',
+
+                    // move tooltip a little bit to the right
+                    offset: [0, 0],
+
+                    // do not initialize tooltips until they are used
+                    lazy: true,
+
+                    // there is no delay when the mouse is moved away from the trigger
+                    delay: 0
+                });
             });
             -->
             //]]>
         </script>
-        <div id="doc4" class="yui-t4">
-            <div id="hd">
-                <h1><?=html::image(array('src'=>'media/images/imglistados-blanco.png','alt'=>'IMGListados','width'=>'200','height'=>'85', 'align'=>'left'))?>
-                <?=$title?></h1>
-                <?php if (isset($user)) echo $user; ?>
-            </div>
-            <div id="bd">
-                <div id="yui-main">
-                    <!-- Si hay errores los muestra -->
-                    <? if (isset($errors)) { ?>
-                    <div class="yui-b data">
-                        <div class="error">
-                                <?=html::image(array('src'=>'media/images/cross.png','alt'=>'Error','align'=>'right','width'=>'16','height'=>'16'))?>
-                            <ul>
-                                    <?php foreach ($errors as $error): ?>
-                                <li><?php echo $error ?></li>
-                                    <?php endforeach ?>
-                            </ul>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <!-- Si hay errores los muestra -->
-                    <? if (isset($messages)) { ?>
-                    <div class="yui-b data">
-                        <div class="success">
-                            <ul>
-                                    <?php foreach ($messages as $message): ?>
-                                <li><?php echo $message ?></li>
-                                    <?php endforeach ?>
-                            </ul>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <!-- $data recibe la grilla de yahoo o lo que sea -->
-                    <div class="yui-b data">
-                        <h2><?php echo $title;?></h2>
-                    </div>
-                    <?=$data?>
+        <script type="text/javascript"><!--//--><![CDATA[//><!--
+            startList = function() {
+                if (document.all&&document.getElementById) {
+                    navRoot = document.getElementById("nav");
+                    for (i=0; i<navRoot.childNodes.length; i++) {
+                        node = navRoot.childNodes[i];
+                        if (node.nodeName=="LI") {
+                            node.onmouseover=function() {
+                                this.className+=" over";
+                            }
+                            node.onmouseout=function() {
+                                this.className=this.className.replace(" over", "");
+                            }
+                        }
+                    }
+                }
+            }
+            window.onload=startList;
 
-                </div>
-                <div class="yui-b navigator">
-                    <!-- YOUR NAVIGATION GOES HERE -->
-                    <div id="navcontainer">
-                        <h3>Menu</h3>
-                        <ul>
-                            <?php foreach ($links as $link => $url): ?>
-                            <li><?php echo html::anchor($url, $link) ?></li>
-                            <?php endforeach ?>
-                        </ul>
-                        <h3>Categorias</h3>
-                        <ul>
-                            <?php
-                            foreach ($cats as $cat => $url): ?>
-                                <?php if ($_SESSION['cat'] == $cat) {
-                                    $class= array('class'=>'current') ;
-                                } else {
-                                    $class = array();
-                                }
-                                ?>
-                            <li><?php echo html::anchor('datos/?cat='.$cat, $url, $class) ?></li>
-                            <?php endforeach ?>
-                        </ul>
-
-                        <h3>Localidades</h3>
-                        <ul>
-                            <?php
-                            foreach ($localidades as $loc => $url): ?>
-                                <?php if ($_SESSION['localidad'] == $loc) {
-                                    $class= array('class'=>'current') ;
-                                } else {
-                                    $class = array();
-                                }
-                                ?>
-                            <li><?php echo html::anchor('datos/?localidad='.$loc, $url, $class) ?></li>
-                            <?php endforeach ?>
-                        </ul>
-                    </div>
-                    <?php //echo $login; ?>
-                </div>
-            </div>
-            <div id="ft">
-                <?=$footer?>
-            </div>
-        </div>
+            //--><!]]></script>
     </body>
 </html>

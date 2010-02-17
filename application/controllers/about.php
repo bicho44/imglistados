@@ -28,6 +28,7 @@ class About_Controller extends Website_Controller {
 
 	public function index() {
 		$this->template->title = 'Administracion :: Acerca de IMGListados';
+                $this->template->controller = 'about';
 		$this->template->data = new View('pages/about');
 	}
 
