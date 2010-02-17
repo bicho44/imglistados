@@ -10,8 +10,8 @@ https://kenai.com/svn/imglistados~imglistados-svn
 2009-06-27T20:45:22.639872Z
 1
 bicho44
-
-
+has-props
+has-prop-mods
 svn:special svn:externals svn:needs-lock
 
 
@@ -237,40 +237,6 @@ has-props
 
 354
 
-smiley-sealed.gif
-file
-
-
-
-
-2007-11-01T18:58:48.000000Z
-28b9401b59fb7ad10b96f57aaa2630c4
-2009-06-27T20:45:22.639872Z
-1
-bicho44
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-325
-
 smiley-cry.gif
 file
 
@@ -305,14 +271,14 @@ has-props
 
 329
 
-smiley-laughing.gif
+smiley-sealed.gif
 file
 
 
 
 
 2007-11-01T18:58:48.000000Z
-b691cfd07d8181059f8a4b041d534cc4
+28b9401b59fb7ad10b96f57aaa2630c4
 2009-06-27T20:45:22.639872Z
 1
 bicho44
@@ -337,16 +303,16 @@ has-props
 
 
 
-344
+325
 
-smiley-foot-in-mouth.gif
+smiley-laughing.gif
 file
 
 
 
 
 2007-11-01T18:58:48.000000Z
-905294088277f201be5a8e0285fb7998
+b691cfd07d8181059f8a4b041d534cc4
 2009-06-27T20:45:22.639872Z
 1
 bicho44
@@ -407,14 +373,14 @@ has-props
 
 336
 
-smiley-embarassed.gif
+smiley-foot-in-mouth.gif
 file
 
 
 
 
 2007-11-01T18:58:48.000000Z
-d59171236e6b0b96091eeda1f7b57ce3
+905294088277f201be5a8e0285fb7998
 2009-06-27T20:45:22.639872Z
 1
 bicho44
@@ -439,7 +405,7 @@ has-props
 
 
 
-331
+344
 
 smiley-tongue-out.gif
 file
@@ -474,6 +440,40 @@ has-props
 
 
 328
+
+smiley-embarassed.gif
+file
+
+
+
+
+2007-11-01T18:58:48.000000Z
+d59171236e6b0b96091eeda1f7b57ce3
+2009-06-27T20:45:22.639872Z
+1
+bicho44
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+331
 
 smiley-wink.gif
 file

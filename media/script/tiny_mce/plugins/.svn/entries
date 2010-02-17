@@ -10,8 +10,8 @@ https://kenai.com/svn/imglistados~imglistados-svn
 2009-06-27T20:45:22.639872Z
 1
 bicho44
-
-
+has-props
+has-prop-mods
 svn:special svn:externals svn:needs-lock
 
 
@@ -84,10 +84,10 @@ dir
 visualchars
 dir
 
-table
+autosave
 dir
 
-autosave
+table
 dir
 
 advlink
