@@ -24,9 +24,16 @@ $lang = array
 'length' => 'El Código Postal debe tener entre 4 y 8 caracteres.',
 'default' => 'Codigo Postal inválido.',
 ),
-'localidad_id'=>Array(
+  'localidad_id'=>Array(
     'required'=>'Debe seleccionar una ciudad',
     'numeric'=>'No puede ser Todas las ciudades',
+    'nogeneric'=>'El dato no puede estar en Todas las ciudades, ¿no?',
     'default' => 'Codigo de Ciudad inválido.',
+),
+    'categoria_id'=>Array(
+    'required'=>'Debe seleccionar una Categoria',
+    'numeric'=>'Seleccione una Categoria',
+    'nogeneric'=>'El dato no puede estar en Todas las Categorias, ¿no?',
+    'default' => 'Codigo de Categoria inválido.',
 ),
 );

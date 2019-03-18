@@ -23,28 +23,7 @@
  *  cache         - Enable or disable query caching
  *	escape        - Enable automatic query builder escaping
  */
-/*
-$config['default'] = array
-(
-	'benchmark'     => TRUE,
-	'persistent'    => FALSE,
-	'connection'    => array
-	(
-		'type'     => 'mysql',
-		'user'     => 'imgdigit',
-		'pass'     => '84624897',
-		'host'     => 'localhost',
-		'port'     => FALSE,
-		'socket'   => FALSE,
-		'database' => 'imgdigit_imglistados'
-	),
-	'character_set' => 'utf8',
-	'table_prefix'  => '',
-	'object'        => TRUE,
-	'cache'         => FALSE,
-	'escape'        => TRUE
-);
-*/
+
 
 $config['default'] = array
 (
@@ -52,13 +31,13 @@ $config['default'] = array
 	'persistent'    => FALSE,
 	'connection'    => array
 	(
-		'type'     => 'mysql',
-		'user'     => 'root',
-		'pass'     => 'root',
+		'type'     => 'mysqli',
+		'user'     => 'guiafueg',
+		'pass'     => 'antonioGaya09',
 		'host'     => 'localhost',
 		'port'     => 8889,
 		'socket'   => FALSE,
-		'database' => 'guia'
+		'database' => 'guiafueg_guia'
 	),
 	'character_set' => 'utf8',
 	'table_prefix'  => '',

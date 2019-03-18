@@ -1,6 +1,4 @@
 <div class="yui-b data">
-    <!-- YOUR DATA GOES HERE -->
-    <h2><?=$title?></h2>
     <h3>Extras</h3>
 </div>
 <?php if (is_object($extras)) { ?>
@@ -27,7 +25,7 @@
     <?php
     //var_dump($form['tipo']);
     foreach ($form['tipo'] as $id=>$name) {
-        echo form::label('contenido['.$name.']',ucfirst($name));
+        echo form::label('contenido['.$name.']',ucfirst($name))."<br />";
         echo form::input(array("id"=>$name,"name"=>'contenido['.$id.']',
         "title"=>$name, "size"=>"30", "value"=>$form['contenido'][$name]));
         //echo html::image(array('src'=>'media/images/cancel.png','alt'=>'borrar','title'=>'Borrar','width'=>'16','height'=>'16'));

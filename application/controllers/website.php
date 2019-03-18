@@ -1,75 +1,75 @@
-<?php defined('SYSPATH') or die('No direct script access.');
+<?php
+
+defined('SYSPATH') or die('No direct script access.');
 
 /*
 
-	Website_Controller
-	-------------------
+  Website_Controller
+  -------------------
 
-	@file 		website.php
-	@version 	1.0.0b
-	@date 		2009-01-26 16:50:14 -0300 (Mon, 26 Jan 2009)
-	@author 	Federico Reinoso <admin@imgdigital.com.ar>
+  @file 		website.php
+  @version 	1.0.0b
+  @date 		2009-01-26 16:50:14 -0300 (Mon, 26 Jan 2009)
+  @author 	Federico Reinoso <admin@imgdigital.com.ar>
 
-	Copyright (c) 2009 IMG Digital <http://imgdigital.com.ar>
+  Copyright (c) 2009 IMG Digital <http://imgdigital.com.ar>
 
-	Controlador Base para todo el sitio
+  Controlador Base para todo el sitio
 
-*/
+ */
 
 class Website_Controller extends Template_Controller {
-        public $user;
-        
-        public $messages = array();
-        public $errors = array();
 
-	private $y = 2009;
+    public $user;
+    public $messages = array();
+    public $errors = array();
+    private $y = 2009;
 
-	public function __construct() {
+    public function __construct() {
 
-		parent::__construct();
-                
-                // Inicio de Session
-		$this->session = Session::instance();
-                // Si la variable cat no está definida, definirla
-                if (!isset($_SESSION['cat'])) $_SESSION['cat'] = 0;
-                if (!isset($_SESSION['localidad'])) $_SESSION['localidad'] = 0;
+        parent::__construct();
 
-		$this->template->links = array (
-			'Acerca de IMGListados'=>'about',
-			'Datos'=>'datos',
-			'Rubros'=>'rubros',
-			
-                        'Exportar Listados'=>'listados'
-		 );
+        // Inicio de Session
+        $this->session = Session::instance();
+        // Si la variable cat no está definida, definirla
+        if (!isset($_SESSION['cat']))
+            $_SESSION['cat'] = 0;
+        if (!isset($_SESSION['localidad']))
+            $_SESSION['localidad'] = 0;
 
-		$this->template->footer = 'Copyright '.$this->thiYear ($this->y).' - '.html::anchor('http://www.imgdigital.com.ar','IMG Digital',array('target'=>'_blank')) .'- '.html::anchor('http://www.imgdigital.com.ar/imglistados','IMGListados', array('target'=>'_blank'));
+        if (isset($_SESSION['messages']) != "") {
+            $this->template->messages = $_SESSION['messages'];
+            unset ($_SESSION['messages']);
+        }
 
-		$this->template->login = new View('login');
+        $this->template->links = Nav::factory()->set('class', 'horizontal interactive dropdown fixed-width')->tree()->render();
 
-                // Da acceso a todos los controladores la base de datos
-		$this->db = Database::instance();
+        $this->template->footer = 'Copyright ' . $this->thiYear($this->y) . ' - ' . html::anchor('http://www.imgdigital.com.ar', 'IMG Digital', array('target' => '_blank')) . '- ' . html::anchor('http://www.imgdigital.com.ar/imglistados', 'IMGListados', array('target' => '_blank'));
 
-                //Listado de Categorías
-                $this->categorias = ORM::factory('categoria')->select_list();
-		//$this->template->cats =  $this->categorias;
+        $this->template->login = new View('login');
 
-                //Listado de Localidades
-                $this->localidades = ORM::factory('localidad')->select_list();
-                //$this->template->localidades = $this->localidades;
-                
-		//$this->profiler = new Profiler;
+        // Da acceso a todos los controladores la base de datos
+        $this->db = Database::instance();
 
-	}
+        //Listado de Categorías
+        $this->categorias = ORM::factory('categoria')->select_list();
+        //$this->template->cats =  $this->categorias;
+        //Listado de Localidades
+        $this->localidades = ORM::factory('localidad')->select_list();
+        //$this->template->localidades = $this->localidades;
+        //$this->profiler = new Profiler;
+    }
 
-	public function index(){
-		if ( ! is_object($this->user))
-   			url::redirect('login');
-	}
+    public function index() {
+        if (!is_object($this->user))
+            url::redirect('login');
+    }
 
-	private function thiYear ($y){
-		$yy = date('Y');
-		if (($yy-$y)>0) return $this->y.' - '.$yy;
-	}
+    private function thiYear($y) {
+        $yy = date('Y');
+        if (($yy - $y) > 0)
+            return $this->y . ' - ' . $yy;
+    }
 
 }
 

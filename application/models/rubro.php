@@ -16,11 +16,11 @@ class Rubro_Model extends ORM_Tree {
 
     protected $primary_val = 'nombre';
 
-    protected $sorting = array('nombre'=>'ASC','parent_id' => 'ASC', );
+    protected $sorting = array('nombre'=>'ASC','parent_id' => 'ASC' );
 
-    protected $has_many = array('datos'=>'datos_rubro');
+    protected $has_many = array('datos'=>'datos_rubro', 'categorias'=>'categorias_rubro');
 
     // Relationships that should always be joined
-    protected $load_with = array('datos','rubros'=>'datos_rubro');
+    protected $load_with = array('datos', 'rubros'=>'datos_rubro', 'categorias'=>'categorias_rubro' );
 
 }

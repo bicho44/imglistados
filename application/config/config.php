@@ -4,22 +4,24 @@
  * then a full URL will be used, eg: http://localhost/kohana/. If it only includes
  * the path, and a site_protocol is specified, the domain will be auto-detected.
  */
-$config['site_domain'] = 'localhost:8888/tdf/';
-//$config['site_domain'] = 'www.imgdigital.com.ar/tdf/';
+//$config['site_domain'] = 'localhost:8888/tdf/';
+$config['site_domain'] = 'www.guiafueguina.info/imglistados/';
+
+//$config['site_domain'] = 'listados.guiafueguina.info/';
 
 /**
  * Force a default protocol to be used by the site. If no site_protocol is
  * specified, then the current protocol is used, or when possible, only an
  * absolute path (with no protocol/domain) is used.
  */
-$config['site_protocol'] = '';
+$config['site_protocol'] = 'http';
 
 /**
  * Name of the front controller for this application. Default: index.php
  *
  * This can be removed by using URL rewriting.
  */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /**
  * Fake file extension that will be added to all generated URLs. Example: .html
@@ -31,7 +33,7 @@ $config['url_suffix'] = '';
  * The internal cache stores file paths and config entries across requests and
  * can give significant speed improvements at the expense of delayed updating.
  */
-$config['internal_cache'] = FALSE;
+$config['internal_cache'] = 1600;
 
 /**
  * Internal cache directory.
@@ -73,7 +75,7 @@ $config['global_xss_filtering'] = TRUE;
 /**
  * Enable or disable hooks.
  */
-$config['enable_hooks'] = TRUE;
+$config['enable_hooks'] = FALSE;
 
 /**
  * Log thresholds:
@@ -83,7 +85,7 @@ $config['enable_hooks'] = TRUE;
  *  3 - Notices
  *  4 - Debugging
  */
-$config['log_threshold'] = 3;
+$config['log_threshold'] = 4;
 
 /**
  * Message logging directory.
@@ -120,7 +122,8 @@ $config['modules'] = array
         MODPATH.'simple_auth',     // Simple Authentication
 	MODPATH.'formo',        // Form generation
 	MODPATH.'debug_toolbar', // Debug Toolbar
-        MODPATH.'yag',      // Grid Module
+	MODPATH.'yag',      // Grid Module
+	MODPATH.'nav',      // Nav Module
 	// MODPATH.'auth',      // Authentication
 	// MODPATH.'kodoc',     // Self-generating documentation
 	// MODPATH.'gmaps',     // Google Maps integration
